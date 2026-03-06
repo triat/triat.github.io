@@ -1,29 +1,433 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tom Riat &mdash; Builder, Engineer, Problem Solver</title>
+<meta name="description" content="Software Engineer & Builder based in Lausanne. I build systems that work — from understanding the problem to running it in production.">
+<meta name="author" content="Tom Riat">
+<meta property="og:title" content="Tom Riat &mdash; Builder, Engineer, Problem Solver">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://riat.dev">
+<meta property="og:description" content="Software Engineer & Builder based in Lausanne. I build systems that work.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-		<title>Hello, it's Tom</title>
-		<meta name="description" content="A simple personal frontpage">
-		<meta name="author" content="Tom Riat">
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">&gt; tom<span>.riat</span></div>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about" data-fr="Approche" data-en="Approach">Approche</a></li>
+        <li><a href="#journey" data-fr="Parcours" data-en="Journey">Parcours</a></li>
+        <li><a href="#project" data-fr="Projet" data-en="Project">Projet</a></li>
+        <li><a href="#collaborate" data-fr="Collaborer" data-en="Collaborate">Collaborer</a></li>
+      </ul>
+      <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+        <span class="lang-option" data-lang="fr">FR</span>
+        <span class="lang-separator">/</span>
+        <span class="lang-option" data-lang="en">EN</span>
+      </button>
+    </div>
+  </div>
+</nav>
 
-		<meta property="og:title" content="Hello, it's Tom">
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="http://riat.dev">
-		<meta property="og:description" content="A simple personal frontpage">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 data-fr="Je construis des choses<br>qui <span>fonctionnent.</span>" data-en="I build things<br>that <span>work.</span>">Je construis des choses<br>qui <span>fonctionnent.</span></h1>
+      <p class="hero-subtitle" data-fr="Ingenieur logiciel et builder base a Lausanne. Je ne fais pas que coder &mdash; je comprends le probleme, je concois la solution, et je m'assure qu'elle tourne en production pour de vrais utilisateurs." data-en="Software engineer and builder based in Lausanne. I don't just write code &mdash; I understand the problem, design the solution, and make sure it runs in production for real users.">Ingenieur logiciel et builder base a Lausanne. Je ne fais pas que coder &mdash; je comprends le probleme, je concois la solution, et je m'assure qu'elle tourne en production pour de vrais utilisateurs.</p>
+      <div class="hero-meta">
+        <div class="hero-stat">
+          <strong>10+</strong>
+          <span data-fr="ans d'experience" data-en="years building">ans d'experience</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Lausanne</strong>
+          <span data-fr="Suisse" data-en="Switzerland">Suisse</span>
+        </div>
+        <div class="hero-stat">
+          <strong data-fr="Disponible" data-en="Available">Disponible</strong>
+          <span data-fr="consulting &amp; projets" data-en="consulting &amp; projects">consulting &amp; projets</span>
+        </div>
+      </div>
+      <div class="hero-tags">
+        <span>Python</span><span>AWS</span><span>Kubernetes</span><span>Terraform</span>
+        <span>DevSecOps</span><span>SRE</span><span>Product</span>
+      </div>
+      <div class="hero-links">
+        <a href="#contact" class="btn btn-primary" data-fr="Discutons de votre projet" data-en="Let's discuss your project">Discutons de votre projet</a>
+        <a href="#journey" class="btn btn-secondary" data-fr="Mon parcours" data-en="My journey">Mon parcours</a>
+      </div>
+    </div>
+    <div class="hero-photo-col">
+      <div class="hero-photo"></div>
+    </div>
+  </div>
+  <!-- Mountain silhouette -->
+  <div class="mountain-divider">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,120 L0,80 L60,65 L120,78 L200,45 L280,60 L340,35 L400,55 L480,20 L540,40 L600,15 L660,30 L720,8 L780,25 L840,42 L900,18 L960,38 L1020,12 L1080,32 L1140,48 L1200,28 L1260,52 L1320,40 L1380,58 L1440,45 L1440,120 Z" fill="var(--section-bg)" />
+      <path d="M0,120 L0,95 L80,82 L160,90 L240,70 L320,85 L400,60 L480,75 L560,50 L640,68 L720,42 L800,58 L880,70 L960,52 L1040,65 L1120,48 L1200,62 L1280,72 L1360,60 L1440,70 L1440,120 Z" fill="var(--section-bg)" opacity="0.5" />
+    </svg>
+  </div>
+</section>
 
-		<!--<link rel="icon" href="/favicon.ico">
-		<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+<!-- WHAT I DO -->
+<section class="section-alt" id="about">
+  <div class="container">
+    <div class="section-label" data-fr="Ce que je fais" data-en="What I do">Ce que je fais</div>
+    <div class="section-title" data-fr="Bien plus que du code." data-en="More than code.">Bien plus que du code.</div>
+    <p class="section-desc" data-fr="J'aborde chaque defi de maniere holistique &mdash; comprendre le probleme, concevoir la bonne solution, la construire et m'assurer qu'elle fonctionne parfaitement en production." data-en="I approach every challenge holistically &mdash; from understanding the problem, to designing the right solution, to making sure it runs flawlessly in production.">J'aborde chaque defi de maniere holistique &mdash; comprendre le probleme, concevoir la bonne solution, la construire et m'assurer qu'elle fonctionne parfaitement en production.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+        <h3 data-fr="Comprendre" data-en="Understand">Comprendre</h3>
+        <p data-fr="Analyser le vrai probleme. Echanger avec les parties prenantes. Cartographier les contraintes avant d'ecrire une seule ligne." data-en="Dig into the real problem. Talk to stakeholders. Map constraints before writing a single line.">Analyser le vrai probleme. Echanger avec les parties prenantes. Cartographier les contraintes avant d'ecrire une seule ligne.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M5 20V8l7-5 7 5v12"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <h3 data-fr="Construire" data-en="Build">Construire</h3>
+        <p data-fr="De l'idee au systeme en production. Python, Django, Go &mdash; ce qui resout le probleme correctement." data-en="From idea to production-ready systems. Python, Django, Go &mdash; whatever gets the job done right.">De l'idee au systeme en production. Python, Django, Go &mdash; ce qui resout le probleme correctement.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3 data-fr="Securiser" data-en="Secure">Securiser</h3>
+        <p data-fr="Etat d'esprit security-first forge dans des industries reglementees. DevSecOps integre des le depart, pas ajoute apres coup." data-en="Security-first mindset from regulated industries. DevSecOps practices baked in, not bolted on.">Etat d'esprit security-first forge dans des industries reglementees. DevSecOps integre des le depart, pas ajoute apres coup.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3 data-fr="Operer" data-en="Operate">Operer</h3>
+        <p data-fr="CI/CD, reponse aux incidents, 99.9% d'uptime. Je suis responsable du cycle de vie complet jusqu'a l'utilisateur." data-en="CI/CD pipelines, incident response, 99.9% uptime. I own the full lifecycle until it reaches users.">CI/CD, reponse aux incidents, 99.9% d'uptime. Je suis responsable du cycle de vie complet jusqu'a l'utilisateur.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<link rel="stylesheet" href="styles.css?v=1.0">
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="container">
+    <div class="section-label" data-fr="Parcours" data-en="Journey">Parcours</div>
+    <div class="section-title" data-fr="10+ ans a construire." data-en="10+ years of building.">10+ ans a construire.</div>
+    <p class="section-desc" data-fr="Un chemin guide par la curiosite, du developpeur autodidacte a la creation de mon propre produit." data-en="A path driven by curiosity, from self-taught developer to founding my own product.">Un chemin guide par la curiosite, du developpeur autodidacte a la creation de mon propre produit.</p>
+    <div class="journey">
 
-	</head>
-	<body>
-		<header>
-			<h1>Hello, I'm Tom!</h1>
-		</header>
-	</body>
+      <!-- Wedding Valet -->
+      <div class="j-item">
+        <div class="j-year">2025</div>
+        <div class="j-dot-wrap"><div class="j-dot"></div></div>
+        <div class="j-content">
+          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+            <div>
+              <h3>Founder</h3>
+              <div class="j-company">Wedding Valet</div>
+            </div>
+            <svg class="j-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <p class="j-summary" data-fr="Assistant IA pour la gestion des invites de mariage via WhatsApp" data-en="AI-powered wedding guest management via WhatsApp">Assistant IA pour la gestion des invites de mariage via WhatsApp</p>
+          <div class="j-details">
+            <p data-fr="Conception et developpement d'un assistant intelligent qui gere la communication avec les invites d'un mariage directement via WhatsApp. RSVP automatise, reponses multilingues, messagerie ciblee par groupes d'invites, et collecte de photos/videos apres l'evenement." data-en="Design and development of an intelligent assistant that manages wedding guest communication directly via WhatsApp. Automated RSVP, multilingual responses, targeted messaging by guest groups, and post-event photo/video collection.">Conception et developpement d'un assistant intelligent qui gere la communication avec les invites d'un mariage directement via WhatsApp. RSVP automatise, reponses multilingues, messagerie ciblee par groupes d'invites, et collecte de photos/videos apres l'evenement.</p>
+            <div class="j-tags">
+              <span>Python</span><span>LLM / AI</span><span>WhatsApp API</span><span>Product</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Taurus -->
+      <div class="j-item">
+        <div class="j-year">2023</div>
+        <div class="j-dot-wrap"><div class="j-dot"></div></div>
+        <div class="j-content">
+          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+            <div>
+              <h3>SRE / Solutions Engineer</h3>
+              <div class="j-company">Taurus SA</div>
+            </div>
+            <svg class="j-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <p class="j-summary" data-fr="Infrastructure d'actifs numeriques pour les banques mondiales" data-en="Digital asset infrastructure for banks worldwide">Infrastructure d'actifs numeriques pour les banques mondiales</p>
+          <div class="j-details">
+            <p data-fr="Pont entre l'equipe Engineering et les equipes techniques des clients (IT, sysadmin, DevOps). Gestion des environnements de production en services manages, support operationnel, accompagnement a l'integration via API et middlewares, gestion des incidents et documentation technique." data-en="Bridge between the Engineering team and clients' technical teams (IT, sysadmin, DevOps). Managed services production environment operations, operational support, API/middleware integration guidance, incident management and technical documentation.">Pont entre l'equipe Engineering et les equipes techniques des clients (IT, sysadmin, DevOps). Gestion des environnements de production en services manages, support operationnel, accompagnement a l'integration via API et middlewares, gestion des incidents et documentation technique.</p>
+            <div class="j-tags">
+              <span>SRE</span><span>API Integration</span><span>Incident Management</span><span>Managed Services</span><span>FinTech</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EvoLink -->
+      <div class="j-item">
+        <div class="j-year">2021</div>
+        <div class="j-dot-wrap"><div class="j-dot"></div></div>
+        <div class="j-content">
+          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+            <div>
+              <h3 data-fr="Consultant en securite" data-en="Security Consultant">Consultant en securite</h3>
+              <div class="j-company">EvoLink SA</div>
+            </div>
+            <svg class="j-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <p class="j-summary" data-fr="Reponse aux incidents, audits de securite, DevSecOps" data-en="Incident response, security audits, DevSecOps">Reponse aux incidents, audits de securite, DevSecOps</p>
+          <div class="j-details">
+            <p data-fr="Gestion et coordination de la reponse aux incidents de securite. Audits legers pour identifier les vulnerabilites dans l'infrastructure des clients. Developpement de solutions de securite d'entreprise et mise en place de methodologies DevSecOps." data-en="Managing and coordinating security incident response. Light audits to identify vulnerabilities in client infrastructure. Development of corporate security solutions and implementation of DevSecOps methodologies.">Gestion et coordination de la reponse aux incidents de securite. Audits legers pour identifier les vulnerabilites dans l'infrastructure des clients. Developpement de solutions de securite d'entreprise et mise en place de methodologies DevSecOps.</p>
+            <div class="j-tags">
+              <span>Security</span><span>Django</span><span>DevSecOps</span><span>Incident Response</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pix4D -->
+      <div class="j-item">
+        <div class="j-year">2015</div>
+        <div class="j-dot-wrap"><div class="j-dot"></div></div>
+        <div class="j-content">
+          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+            <div>
+              <h3 data-fr="Backend Developer &rarr; Senior Engineer" data-en="Backend Developer &rarr; Senior Engineer">Backend Developer &rarr; Senior Engineer</h3>
+              <div class="j-company">Pix4D &mdash; 5 ans</div>
+            </div>
+            <svg class="j-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <p class="j-summary" data-fr="Services cloud-native pour la photogrammetrie a grande echelle" data-en="Cloud-native services for photogrammetry at scale">Services cloud-native pour la photogrammetrie a grande echelle</p>
+          <div class="j-details">
+            <p data-fr="Architecture et developpement de services backend cloud-native haute performance. Deploiement avec outils d'automatisation (DevOps), definition de l'architecture de securite, optimisation des couts AWS, developpement RDBMS, operations SaaS. Participation au recrutement et mentorat de developpeurs juniors a seniors." data-en="Architecture and development of high-performance cloud-native backend services. Deployment with automation tooling (DevOps), security architecture, AWS cost optimization, RDBMS development, SaaS operations. Hiring participation and mentoring developers from junior to senior.">Architecture et developpement de services backend cloud-native haute performance. Deploiement avec outils d'automatisation (DevOps), definition de l'architecture de securite, optimisation des couts AWS, developpement RDBMS, operations SaaS. Participation au recrutement et mentorat de developpeurs juniors a seniors.</p>
+            <div class="j-tags">
+              <span>Python</span><span>Django</span><span>AWS</span><span>DevOps</span><span>PostgreSQL</span><span>Mentoring</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Early career -->
+      <div class="j-item">
+        <div class="j-year">2012</div>
+        <div class="j-dot-wrap"><div class="j-dot"></div></div>
+        <div class="j-content">
+          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+            <div>
+              <h3 data-fr="Premiers pas" data-en="First steps">Premiers pas</h3>
+              <div class="j-company" data-fr="Startups &amp; developpement web" data-en="Startups &amp; web development">Startups &amp; developpement web</div>
+            </div>
+            <svg class="j-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </div>
+          <p class="j-summary" data-fr="Autodidacte, CFC en informatique, premieres experiences startups" data-en="Self-taught, CFC in IT, first startup experiences">Autodidacte, CFC en informatique, premieres experiences startups</p>
+          <div class="j-details">
+            <p data-fr="Developpeur full-stack dans plusieurs startups (TasFaim, Gokera, imavox). Django, Scala, jQuery. CFC en informatique a l'Ecole des metiers techniques. Responsable de la branche web/multimedia chez AZ Informatique, en contact direct avec les clients du debut a la fin des projets." data-en="Full-stack developer across several startups (TasFaim, Gokera, imavox). Django, Scala, jQuery. CFC in IT from Ecole des metiers techniques. Head of web/multimedia branch at AZ Informatique, working directly with clients from start to finish.">Developpeur full-stack dans plusieurs startups (TasFaim, Gokera, imavox). Django, Scala, jQuery. CFC en informatique a l'Ecole des metiers techniques. Responsable de la branche web/multimedia chez AZ Informatique, en contact direct avec les clients du debut a la fin des projets.</p>
+            <div class="j-tags">
+              <span>Django</span><span>Scala</span><span>Full-stack</span><span>Startups</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section-alt" id="certifications">
+  <div class="container">
+    <div class="section-label" data-fr="Certifications" data-en="Certifications">Certifications</div>
+    <div class="certs-row">
+      <a href="https://academy.exoscale.com/certificates/8027af251b9549d5b2bd12e5c3ba693c" target="_blank" rel="noopener" class="cert-item">
+        <div class="cert-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2 5l2-1l2 1l-2-5"/><circle cx="12" cy="9" r="6"/></svg>
+        </div>
+        <div>
+          <h3>Exoscale Certified Solution Architect</h3>
+          <p data-fr="Architecture cloud &amp; infrastructure &mdash; Fevrier 2026" data-en="Cloud architecture &amp; infrastructure &mdash; February 2026">Architecture cloud &amp; infrastructure &mdash; Fevrier 2026</p>
+        </div>
+        <svg class="cert-ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project">
+  <div class="container">
+    <div class="section-label" data-fr="Projet actuel" data-en="Current project">Projet actuel</div>
+    <div class="section-title">Wedding Valet</div>
+    <p class="section-desc" data-fr="Ce que je construis en ce moment." data-en="What I'm building right now.">Ce que je construis en ce moment.</p>
+    <div class="project-card">
+      <div class="project-info">
+        <div class="project-badge">Founder</div>
+        <h3 data-fr="Un assistant IA pour les mariages" data-en="An AI assistant for weddings">Un assistant IA pour les mariages</h3>
+        <p data-fr="Wedding Valet gere la communication avec les invites d'un mariage via WhatsApp &mdash; RSVP, logistique, reponses multilingues, et collecte de photos apres l'evenement. Aucune application a installer, tout se passe dans une conversation." data-en="Wedding Valet handles wedding guest communication via WhatsApp &mdash; RSVPs, logistics, multilingual responses, and post-event photo collection. No app to install, everything happens in a simple conversation.">Wedding Valet gere la communication avec les invites d'un mariage via WhatsApp &mdash; RSVP, logistique, reponses multilingues, et collecte de photos apres l'evenement. Aucune application a installer, tout se passe dans une conversation.</p>
+        <ul class="project-features">
+          <li data-fr="RSVP automatise avec allergies &amp; accompagnants" data-en="Automated RSVP with dietary needs &amp; +1 tracking">RSVP automatise avec allergies &amp; accompagnants</li>
+          <li data-fr="S'adapte automatiquement a la langue de chaque invite" data-en="Auto-adapts to each guest's language">S'adapte automatiquement a la langue de chaque invite</li>
+          <li data-fr="Messages cibles par groupes d'invites" data-en="Targeted messaging by guest groups">Messages cibles par groupes d'invites</li>
+          <li data-fr="Collecte de photos &amp; videos apres l'evenement" data-en="Photo &amp; video collection after the event">Collecte de photos &amp; videos apres l'evenement</li>
+        </ul>
+        <a href="https://weddingvalet.ch" target="_blank" rel="noopener" class="btn btn-primary" data-fr="Decouvrir Wedding Valet" data-en="Discover Wedding Valet">Decouvrir Wedding Valet</a>
+      </div>
+      <div class="project-visual">
+        <div class="project-screenshots">
+          <img src="data/wv-screenshot-1.png" alt="Wedding Valet - Landing page" class="project-img project-img-back" loading="lazy">
+          <img src="data/wv-screenshot-2.png" alt="Wedding Valet - Dashboard conversations" class="project-img project-img-front" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK WITH ME -->
+<section id="collaborate">
+  <div class="container">
+    <div class="section-label" data-fr="Travaillons ensemble" data-en="Work with me">Travaillons ensemble</div>
+    <div class="section-title" data-fr="Vous avez un probleme a resoudre ?" data-en="Got a problem to solve?">Vous avez un probleme a resoudre ?</div>
+    <p class="section-desc" data-fr="Je ne cherche pas juste des missions &mdash; je cherche des problemes interessants a resoudre avec des gens qui veulent construire quelque chose de solide." data-en="I'm not just looking for gigs &mdash; I'm looking for interesting problems to solve with people who want to build something solid.">Je ne cherche pas juste des missions &mdash; je cherche des problemes interessants a resoudre avec des gens qui veulent construire quelque chose de solide.</p>
+    <div class="collab-grid">
+      <div class="collab-card">
+        <div class="collab-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <h3 data-fr="Votre infra vous freine" data-en="Your infra is slowing you down">Votre infra vous freine</h3>
+        <p data-fr="Deployements douloureux, incidents recurrents, couts cloud qui explosent ? Je peux auditer, restructurer et automatiser." data-en="Painful deployments, recurring incidents, spiraling cloud costs? I can audit, restructure, and automate.">Deployements douloureux, incidents recurrents, couts cloud qui explosent ? Je peux auditer, restructurer et automatiser.</p>
+      </div>
+      <div class="collab-card">
+        <div class="collab-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3 data-fr="Vous lancez un produit" data-en="You're launching a product">Vous lancez un produit</h3>
+        <p data-fr="De l'idee au MVP en production. Architecture, backend, deploiement, monitoring &mdash; je peux vous accompagner sur tout le cycle." data-en="From idea to MVP in production. Architecture, backend, deployment, monitoring &mdash; I can guide you through the full cycle.">De l'idee au MVP en production. Architecture, backend, deploiement, monitoring &mdash; je peux vous accompagner sur tout le cycle.</p>
+      </div>
+      <div class="collab-card">
+        <div class="collab-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 data-fr="Votre equipe a besoin d'un boost" data-en="Your team needs a boost">Votre equipe a besoin d'un boost</h3>
+        <p data-fr="Mettre en place les bonnes pratiques DevOps, former sur l'IaC, renforcer la securite &mdash; je peux integrer votre equipe sur une mission precise." data-en="Setting up DevOps best practices, training on IaC, strengthening security &mdash; I can join your team for a focused mission.">Mettre en place les bonnes pratiques DevOps, former sur l'IaC, renforcer la securite &mdash; je peux integrer votre equipe sur une mission precise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-alt" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="section-label" data-fr="Discutons" data-en="Let's talk">Discutons</div>
+        <div class="section-title" data-fr="Un cafe, un appel, un message." data-en="A coffee, a call, a message.">Un cafe, un appel, un message.</div>
+        <p class="section-desc" data-fr="Pas besoin d'un cahier des charges de 40 pages. Decrivez-moi votre probleme et on voit ensemble si je peux aider." data-en="No need for a 40-page spec. Tell me about your problem and let's figure out together if I can help.">Pas besoin d'un cahier des charges de 40 pages. Decrivez-moi votre probleme et on voit ensemble si je peux aider.</p>
+      </div>
+      <div class="contact-channels">
+        <div class="channel-row">
+          <a href="mailto:tom@riat.dev" class="channel-card">
+            <div class="channel-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+            </div>
+            <div class="channel-name">Email</div>
+            <div class="channel-detail">tom@riat.dev</div>
+            <div class="channel-hint" data-fr="Pour les demandes detaillees" data-en="For detailed inquiries">Pour les demandes detaillees</div>
+          </a>
+          <a href="https://www.linkedin.com/in/tom-riat" target="_blank" rel="noopener" class="channel-card">
+            <div class="channel-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div class="channel-name">LinkedIn</div>
+            <div class="channel-detail">tom-riat</div>
+            <div class="channel-hint" data-fr="Pour faire connaissance" data-en="To get acquainted">Pour faire connaissance</div>
+          </a>
+          <a href="https://wa.me/+41796357479?text=Salut%20Tom%20!" target="_blank" rel="noopener" class="channel-card">
+            <div class="channel-icon channel-icon-wa">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </div>
+            <div class="channel-name">WhatsApp</div>
+            <div class="channel-detail" data-fr="Message direct" data-en="Direct message">Message direct</div>
+            <div class="channel-hint" data-fr="Pour un echange rapide" data-en="For a quick chat">Pour un echange rapide</div>
+          </a>
+          <div class="channel-card channel-card-irl">
+            <div class="channel-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="channel-name" data-fr="En personne" data-en="In person">En personne</div>
+            <div class="channel-detail">Lausanne</div>
+            <div class="channel-hint" data-fr="Autour d'un cafe" data-en="Over a coffee">Autour d'un cafe</div>
+          </div>
+        </div>
+        <div class="contact-sub">
+          <a href="https://github.com/triat" target="_blank" rel="noopener" class="contact-sub-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span data-fr="Voir mon code sur GitHub" data-en="See my code on GitHub">Voir mon code sur GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-mountain">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 L0,20 L100,35 L200,15 L300,28 L400,8 L500,22 L600,5 L700,18 L800,30 L900,12 L1000,25 L1100,10 L1200,20 L1300,32 L1440,15 L1440,0 Z" fill="var(--section-bg)"/>
+    </svg>
+  </div>
+  <p>Tom Riat &mdash; Lausanne, Suisse</p>
+</footer>
+
+<script>
+let currentLang = 'fr';
+
+function toggleLang() {
+  currentLang = currentLang === 'fr' ? 'en' : 'fr';
+  document.documentElement.lang = currentLang;
+
+  document.querySelectorAll('.lang-option').forEach(function(el) {
+    el.classList.toggle('active', el.dataset.lang === currentLang);
+  });
+
+  document.querySelectorAll('[data-' + currentLang + ']').forEach(function(el) {
+    var text = el.getAttribute('data-' + currentLang);
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = text;
+    } else {
+      el.innerHTML = text;
+    }
+  });
+}
+
+// Init
+document.querySelector('.lang-option[data-lang="fr"]').classList.add('active');
+
+// Floating CTA - show after scrolling past hero
+var floatingCta = document.querySelector('.floating-cta');
+var hero = document.querySelector('.hero');
+function checkScroll() {
+  if (window.scrollY > hero.offsetHeight * 0.6) {
+    floatingCta.classList.add('visible');
+  } else {
+    floatingCta.classList.remove('visible');
+  }
+}
+window.addEventListener('scroll', checkScroll, { passive: true });
+checkScroll();
+</script>
+
+<!-- Floating CTA -->
+<a href="#contact" class="floating-cta" data-fr="Discutons" data-en="Let's talk">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <span data-fr="Discutons" data-en="Let's talk">Discutons</span>
+</a>
+
+</body>
 </html>
-
