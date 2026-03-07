@@ -3,20 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tom Riat &mdash; Builder, Engineer, Problem Solver</title>
-<meta name="description" content="Software Engineer & Builder based in Lausanne. I build systems that work — from understanding the problem to running it in production.">
+<title>Tom Riat — Ingénieur Logiciel & Builder à Lausanne | Python, AWS, DevSecOps</title>
+<meta name="description" content="Ingénieur logiciel et builder basé à Lausanne. Je construis des systèmes qui fonctionnent — de la compréhension du problème à la mise en production. Python, AWS, Kubernetes, DevSecOps.">
 <meta name="author" content="Tom Riat">
-<meta property="og:title" content="Tom Riat &mdash; Builder, Engineer, Problem Solver">
+<meta name="keywords" content="ingénieur logiciel, software engineer, Lausanne, Suisse, Python, AWS, Kubernetes, Terraform, DevSecOps, SRE, consultant, freelance, builder">
+<link rel="canonical" href="https://riat.dev/">
+<link rel="alternate" hreflang="fr" href="https://riat.dev/">
+<link rel="alternate" hreflang="en" href="https://riat.dev/">
+<link rel="alternate" hreflang="x-default" href="https://riat.dev/">
+<meta name="theme-color" content="#C56B4A">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:title" content="Tom Riat — Ingénieur Logiciel & Builder à Lausanne">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://riat.dev">
-<meta property="og:description" content="Software Engineer & Builder based in Lausanne. I build systems that work.">
+<meta property="og:url" content="https://riat.dev/">
+<meta property="og:description" content="Ingénieur logiciel basé à Lausanne. Python, AWS, Kubernetes, DevSecOps. Je construis des systèmes qui fonctionnent en production.">
+<meta property="og:image" content="https://riat.dev/data/tom-riat-portrait.jpg">
+<meta property="og:image:alt" content="Tom Riat — Ingénieur logiciel à Lausanne">
+<meta property="og:locale" content="fr_CH">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Tom Riat">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tom Riat — Ingénieur Logiciel & Builder à Lausanne">
+<meta name="twitter:description" content="Ingénieur logiciel basé à Lausanne. Python, AWS, Kubernetes, DevSecOps.">
+<meta name="twitter:image" content="https://riat.dev/data/tom-riat-portrait.jpg">
+<!-- Geo -->
+<meta name="geo.region" content="CH-VD">
+<meta name="geo.placename" content="Lausanne">
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tom Riat",
+  "url": "https://riat.dev",
+  "image": "https://riat.dev/data/tom-riat-portrait.jpg",
+  "jobTitle": "Ingénieur Logiciel",
+  "description": "Ingénieur logiciel et builder basé à Lausanne. Spécialisé en Python, AWS, Kubernetes, DevSecOps.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lausanne",
+    "addressRegion": "Vaud",
+    "addressCountry": "CH"
+  },
+  "email": "tom@riat.dev",
+  "sameAs": [
+    "https://www.linkedin.com/in/tom-riat",
+    "https://github.com/triat"
+  ],
+  "knowsAbout": ["Python", "AWS", "Kubernetes", "Terraform", "DevSecOps", "SRE", "Django", "Go"],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Wedding Valet",
+    "url": "https://weddingvalet.ch"
+  }
+}
+</script>
 </head>
 <body>
 
+<header>
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
@@ -36,6 +88,9 @@
     </div>
   </div>
 </nav>
+</header>
+
+<main>
 
 <!-- HERO -->
 <section class="hero">
@@ -67,7 +122,7 @@
       </div>
     </div>
     <div class="hero-photo-col">
-      <div class="hero-photo"></div>
+      <img src="data/tom-riat-portrait.jpg" alt="Tom Riat, ingénieur logiciel à Lausanne" class="hero-photo" width="300" height="300" loading="eager">
     </div>
   </div>
   <!-- Mountain silhouette -->
@@ -80,10 +135,10 @@
 </section>
 
 <!-- WHAT I DO -->
-<section class="section-alt" id="about">
+<section class="section-alt" id="about" aria-labelledby="about-title">
   <div class="container">
     <div class="section-label" data-fr="Ce que je fais" data-en="What I do">Ce que je fais</div>
-    <div class="section-title" data-fr="Bien plus que du code." data-en="More than code.">Bien plus que du code.</div>
+    <h2 id="about-title" class="section-title" data-fr="Bien plus que du code." data-en="More than code.">Bien plus que du code.</h2>
     <p class="section-desc" data-fr="J'aborde chaque défi de manière holistique &mdash; comprendre le problème, concevoir la bonne solution, la construire et m'assurer qu'elle fonctionne parfaitement en production." data-en="I approach every challenge holistically &mdash; from understanding the problem, to designing the right solution, to making sure it runs flawlessly in production.">J'aborde chaque défi de manière holistique &mdash; comprendre le problème, concevoir la bonne solution, la construire et m'assurer qu'elle fonctionne parfaitement en production.</p>
     <div class="cards">
       <div class="card">
@@ -119,10 +174,10 @@
 </section>
 
 <!-- JOURNEY -->
-<section id="journey">
+<section id="journey" aria-labelledby="journey-title">
   <div class="container">
     <div class="section-label" data-fr="Parcours" data-en="Journey">Parcours</div>
-    <div class="section-title" data-fr="10+ ans à construire." data-en="10+ years of building.">10+ ans à construire.</div>
+    <h2 id="journey-title" class="section-title" data-fr="10+ ans à construire." data-en="10+ years of building.">10+ ans à construire.</h2>
     <p class="section-desc" data-fr="Un chemin guidé par la curiosité, du développeur autodidacte à la création de mon propre produit." data-en="A path driven by curiosity, from self-taught developer to founding my own product.">Un chemin guidé par la curiosité, du développeur autodidacte à la création de mon propre produit.</p>
     <div class="journey">
 
@@ -260,10 +315,10 @@
 </section>
 
 <!-- PROJECT -->
-<section id="project">
+<section id="project" aria-labelledby="project-title">
   <div class="container">
     <div class="section-label" data-fr="Projet actuel" data-en="Current project">Projet actuel</div>
-    <div class="section-title">Wedding Valet</div>
+    <h2 id="project-title" class="section-title">Wedding Valet</h2>
     <p class="section-desc" data-fr="Ce que je construis en ce moment." data-en="What I'm building right now.">Ce que je construis en ce moment.</p>
     <div class="project-card">
       <div class="project-info">
@@ -289,10 +344,10 @@
 </section>
 
 <!-- WORK WITH ME -->
-<section id="collaborate">
+<section id="collaborate" aria-labelledby="collaborate-title">
   <div class="container">
     <div class="section-label" data-fr="Travaillons ensemble" data-en="Work with me">Travaillons ensemble</div>
-    <div class="section-title" data-fr="Vous avez un problème à résoudre ?" data-en="Got a problem to solve?">Vous avez un problème à résoudre ?</div>
+    <h2 id="collaborate-title" class="section-title" data-fr="Vous avez un problème à résoudre ?" data-en="Got a problem to solve?">Vous avez un problème à résoudre ?</h2>
     <p class="section-desc" data-fr="Je ne cherche pas juste des missions &mdash; je cherche des problèmes intéressants à résoudre avec des gens qui veulent construire quelque chose de solide." data-en="I'm not just looking for gigs &mdash; I'm looking for interesting problems to solve with people who want to build something solid.">Je ne cherche pas juste des missions &mdash; je cherche des problèmes intéressants à résoudre avec des gens qui veulent construire quelque chose de solide.</p>
     <div class="collab-grid">
       <div class="collab-card">
@@ -321,12 +376,12 @@
 </section>
 
 <!-- CONTACT -->
-<section class="section-alt" id="contact">
+<section class="section-alt" id="contact" aria-labelledby="contact-title">
   <div class="container">
     <div class="contact-grid">
       <div>
         <div class="section-label" data-fr="Discutons" data-en="Let's talk">Discutons</div>
-        <div class="section-title" data-fr="Un café, un appel, un message." data-en="A coffee, a call, a message.">Un café, un appel, un message.</div>
+        <h2 id="contact-title" class="section-title" data-fr="Un café, un appel, un message." data-en="A coffee, a call, a message.">Un café, un appel, un message.</h2>
         <p class="section-desc" data-fr="Pas besoin d'un cahier des charges de 40 pages. Décrivez-moi votre problème et on voit ensemble si je peux aider." data-en="No need for a 40-page spec. Tell me about your problem and let's figure out together if I can help.">Pas besoin d'un cahier des charges de 40 pages. Décrivez-moi votre problème et on voit ensemble si je peux aider.</p>
       </div>
       <div class="contact-channels">
@@ -375,6 +430,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-mountain">
@@ -382,7 +439,7 @@
       <path d="M0,0 L0,20 L100,35 L200,15 L300,28 L400,8 L500,22 L600,5 L700,18 L800,30 L900,12 L1000,25 L1100,10 L1200,20 L1300,32 L1440,15 L1440,0 Z" fill="var(--section-bg)"/>
     </svg>
   </div>
-  <p>Tom Riat &mdash; Lausanne, Suisse</p>
+  <p>&copy; 2026 Tom Riat &mdash; Ingénieur Logiciel &mdash; Lausanne, Suisse</p>
 </footer>
 
 <script>
