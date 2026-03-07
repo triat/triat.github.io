@@ -748,7 +748,7 @@ section {
 
 .channel-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -797,6 +797,16 @@ section {
 
 .channel-card:hover .channel-icon-wa {
   background: #25D366;
+  color: white;
+}
+
+.channel-icon-tg {
+  background: #E3F2FD;
+  color: #2AABEE;
+}
+
+.channel-card:hover .channel-icon-tg {
+  background: #2AABEE;
   color: white;
 }
 

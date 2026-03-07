@@ -13,6 +13,11 @@
 <link rel="alternate" hreflang="x-default" href="https://riat.dev/">
 <meta name="theme-color" content="#C56B4A">
 <meta name="robots" content="index, follow">
+<!-- Security -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
 <!-- Open Graph -->
 <meta property="og:title" content="Tom Riat — Ingénieur Logiciel & Builder à Lausanne">
 <meta property="og:type" content="website">
@@ -52,10 +57,10 @@
     "addressRegion": "Vaud",
     "addressCountry": "CH"
   },
-  "email": "tom@riat.dev",
   "sameAs": [
     "https://www.linkedin.com/in/tom-riat",
-    "https://github.com/triat"
+    "https://github.com/triat",
+    "https://t.me/TheOneAndUniqueTom"
   ],
   "knowsAbout": ["Python", "AWS", "Kubernetes", "Terraform", "DevSecOps", "SRE", "Django", "Go"],
   "worksFor": {
@@ -80,7 +85,7 @@
         <li><a href="#project" data-fr="Projet" data-en="Project">Projet</a></li>
         <li><a href="#collaborate" data-fr="Collaborer" data-en="Collaborate">Collaborer</a></li>
       </ul>
-      <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+      <button class="lang-toggle" id="lang-toggle-btn" aria-label="Toggle language">
         <span class="lang-option" data-lang="fr">FR</span>
         <span class="lang-separator">/</span>
         <span class="lang-option" data-lang="en">EN</span>
@@ -186,7 +191,7 @@
         <div class="j-year">2025</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
-          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+          <div class="j-header">
             <div>
               <h3>Founder</h3>
               <div class="j-company">Wedding Valet</div>
@@ -208,7 +213,7 @@
         <div class="j-year">2023</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
-          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+          <div class="j-header">
             <div>
               <h3>SRE / Solutions Engineer</h3>
               <div class="j-company">Taurus SA</div>
@@ -230,7 +235,7 @@
         <div class="j-year">2021</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
-          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+          <div class="j-header">
             <div>
               <h3 data-fr="Consultant en sécurité" data-en="Security Consultant">Consultant en sécurité</h3>
               <div class="j-company">EvoLink SA</div>
@@ -252,7 +257,7 @@
         <div class="j-year">2015</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
-          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+          <div class="j-header">
             <div>
               <h3 data-fr="Backend Developer &rarr; Senior Engineer" data-en="Backend Developer &rarr; Senior Engineer">Backend Developer &rarr; Senior Engineer</h3>
               <div class="j-company">Pix4D &mdash; 5 ans</div>
@@ -274,7 +279,7 @@
         <div class="j-year">2012</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
-          <div class="j-header" onclick="this.closest('.j-item').classList.toggle('open')">
+          <div class="j-header">
             <div>
               <h3 data-fr="Premiers pas" data-en="First steps">Premiers pas</h3>
               <div class="j-company" data-fr="Startups &amp; développement web" data-en="Startups &amp; web development">Startups &amp; développement web</div>
@@ -300,7 +305,7 @@
   <div class="container">
     <div class="section-label" data-fr="Certifications" data-en="Certifications">Certifications</div>
     <div class="certs-row">
-      <a href="https://academy.exoscale.com/certificates/8027af251b9549d5b2bd12e5c3ba693c" target="_blank" rel="noopener" class="cert-item">
+      <a href="https://academy.exoscale.com/certificates/8027af251b9549d5b2bd12e5c3ba693c" target="_blank" rel="noopener noreferrer" class="cert-item">
         <div class="cert-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2 5l2-1l2 1l-2-5"/><circle cx="12" cy="9" r="6"/></svg>
         </div>
@@ -331,7 +336,7 @@
           <li data-fr="Messages ciblés par groupes d'invités" data-en="Targeted messaging by guest groups">Messages ciblés par groupes d'invités</li>
           <li data-fr="Collecte de photos &amp; vidéos après l'événement" data-en="Photo &amp; video collection after the event">Collecte de photos &amp; vidéos après l'événement</li>
         </ul>
-        <a href="https://weddingvalet.ch" target="_blank" rel="noopener" class="btn btn-primary" data-fr="Découvrir Wedding Valet" data-en="Discover Wedding Valet">Découvrir Wedding Valet</a>
+        <a href="https://weddingvalet.ch" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-fr="Découvrir Wedding Valet" data-en="Discover Wedding Valet">Découvrir Wedding Valet</a>
       </div>
       <div class="project-visual">
         <div class="project-screenshots">
@@ -386,15 +391,15 @@
       </div>
       <div class="contact-channels">
         <div class="channel-row">
-          <a href="mailto:tom@riat.dev" class="channel-card">
+          <a href="#" id="email-link" class="channel-card">
             <div class="channel-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
             </div>
             <div class="channel-name">Email</div>
-            <div class="channel-detail">tom@riat.dev</div>
+            <div class="channel-detail" id="email-display"></div>
             <div class="channel-hint" data-fr="Pour les demandes détaillées" data-en="For detailed inquiries">Pour les demandes détaillées</div>
           </a>
-          <a href="https://www.linkedin.com/in/tom-riat" target="_blank" rel="noopener" class="channel-card">
+          <a href="https://www.linkedin.com/in/tom-riat" target="_blank" rel="noopener noreferrer" class="channel-card">
             <div class="channel-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </div>
@@ -402,12 +407,20 @@
             <div class="channel-detail">tom-riat</div>
             <div class="channel-hint" data-fr="Pour faire connaissance" data-en="To get acquainted">Pour faire connaissance</div>
           </a>
-          <a href="https://wa.me/+41796357479?text=Salut%20Tom%20!" target="_blank" rel="noopener" class="channel-card">
+          <a href="#" id="wa-link" target="_blank" rel="noopener noreferrer" class="channel-card">
             <div class="channel-icon channel-icon-wa">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
             </div>
             <div class="channel-name">WhatsApp</div>
             <div class="channel-detail" data-fr="Message direct" data-en="Direct message">Message direct</div>
+            <div class="channel-hint" data-fr="Pour un échange rapide" data-en="For a quick chat">Pour un échange rapide</div>
+          </a>
+          <a href="https://t.me/TheOneAndUniqueTom" target="_blank" rel="noopener noreferrer" class="channel-card">
+            <div class="channel-icon channel-icon-tg">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 4.4L2.4 11.5c-.6.2-.6.8 0 1l4.8 1.5 1.8 5.8c.2.5.7.5 1 .2l2.6-2.2 4.9 3.6c.5.4 1.2.1 1.3-.5L21.9 5.4c.2-.7-.3-1.2-.7-1z"/><path d="M8.8 13.5l8.5-6.3"/></svg>
+            </div>
+            <div class="channel-name">Telegram</div>
+            <div class="channel-detail">@TheOneAndUniqueTom</div>
             <div class="channel-hint" data-fr="Pour un échange rapide" data-en="For a quick chat">Pour un échange rapide</div>
           </a>
           <div class="channel-card channel-card-irl">
@@ -420,7 +433,7 @@
           </div>
         </div>
         <div class="contact-sub">
-          <a href="https://github.com/triat" target="_blank" rel="noopener" class="contact-sub-link">
+          <a href="https://github.com/triat" target="_blank" rel="noopener noreferrer" class="contact-sub-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             <span data-fr="Voir mon code sur GitHub" data-en="See my code on GitHub">Voir mon code sur GitHub</span>
           </a>
@@ -442,43 +455,7 @@
   <p>&copy; 2026 Tom Riat &mdash; Ingénieur Logiciel &mdash; Lausanne, Suisse</p>
 </footer>
 
-<script>
-let currentLang = 'fr';
-
-function toggleLang() {
-  currentLang = currentLang === 'fr' ? 'en' : 'fr';
-  document.documentElement.lang = currentLang;
-
-  document.querySelectorAll('.lang-option').forEach(function(el) {
-    el.classList.toggle('active', el.dataset.lang === currentLang);
-  });
-
-  document.querySelectorAll('[data-' + currentLang + ']').forEach(function(el) {
-    var text = el.getAttribute('data-' + currentLang);
-    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-      el.placeholder = text;
-    } else {
-      el.innerHTML = text;
-    }
-  });
-}
-
-// Init
-document.querySelector('.lang-option[data-lang="fr"]').classList.add('active');
-
-// Floating CTA - show after scrolling past hero
-var floatingCta = document.querySelector('.floating-cta');
-var hero = document.querySelector('.hero');
-function checkScroll() {
-  if (window.scrollY > hero.offsetHeight * 0.6) {
-    floatingCta.classList.add('visible');
-  } else {
-    floatingCta.classList.remove('visible');
-  }
-}
-window.addEventListener('scroll', checkScroll, { passive: true });
-checkScroll();
-</script>
+<script src="main.js"></script>
 
 <!-- Floating CTA -->
 <a href="#contact" class="floating-cta" data-fr="Discutons" data-en="Let's talk">
