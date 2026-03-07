@@ -109,7 +109,7 @@
     if (!floatingCta || !hero) return;
 
     function checkScroll() {
-      if (window.scrollY > hero.offsetHeight * 0.6) {
+      if (window.scrollY > hero.offsetHeight * 0.85) {
         floatingCta.classList.add('visible');
       } else {
         floatingCta.classList.remove('visible');
@@ -120,10 +120,51 @@
     checkScroll();
   }
 
+  // Burger menu (mobile)
+  function initBurger() {
+    var btn = document.getElementById('burger-btn');
+    var links = document.querySelector('.nav-links');
+    if (!btn || !links) return;
+    btn.addEventListener('click', function () {
+      var isOpen = links.classList.toggle('open');
+      btn.classList.toggle('active', isOpen);
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+    // Close on link click
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        links.classList.remove('open');
+        btn.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Dark mode toggle
+  function initThemeToggle() {
+    var btn = document.getElementById('theme-toggle-btn');
+    if (!btn) return;
+    // Check saved preference or system preference
+    var saved = localStorage.getItem('theme');
+    if (saved) {
+      document.documentElement.setAttribute('data-theme', saved);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    btn.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  }
+
   // Init all
   document.querySelector('.lang-option[data-lang="fr"]').classList.add('active');
   initContact();
   initJourneyAccordion();
   initLangToggle();
   initFloatingCTA();
+  initBurger();
+  initThemeToggle();
 })();

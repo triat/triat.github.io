@@ -85,10 +85,17 @@
         <li><a href="#project" data-fr="Projet" data-en="Project">Projet</a></li>
         <li><a href="#collaborate" data-fr="Collaborer" data-en="Collaborate">Collaborer</a></li>
       </ul>
+      <button class="burger" id="burger-btn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <button class="lang-toggle" id="lang-toggle-btn" aria-label="Toggle language">
         <span class="lang-option" data-lang="fr">FR</span>
         <span class="lang-separator">/</span>
         <span class="lang-option" data-lang="en">EN</span>
+      </button>
+      <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark mode">
+        <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
     </div>
   </div>
@@ -188,7 +195,7 @@
 
       <!-- Wedding Valet -->
       <div class="j-item">
-        <div class="j-year">2025</div>
+        <div class="j-year" data-fr="2025 — auj." data-en="2025 — now">2025 — auj.</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
           <div class="j-header">
@@ -210,7 +217,7 @@
 
       <!-- Taurus -->
       <div class="j-item">
-        <div class="j-year">2023</div>
+        <div class="j-year">2023 — 2025</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
           <div class="j-header">
@@ -232,7 +239,7 @@
 
       <!-- EvoLink -->
       <div class="j-item">
-        <div class="j-year">2021</div>
+        <div class="j-year">2021 — 2023</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
           <div class="j-header">
@@ -254,13 +261,13 @@
 
       <!-- Pix4D -->
       <div class="j-item">
-        <div class="j-year">2015</div>
+        <div class="j-year">2015 — 2021</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
           <div class="j-header">
             <div>
               <h3 data-fr="Backend Developer &rarr; Senior Engineer" data-en="Backend Developer &rarr; Senior Engineer">Backend Developer &rarr; Senior Engineer</h3>
-              <div class="j-company">Pix4D &mdash; 5 ans</div>
+              <div class="j-company">Pix4D</div>
             </div>
             <svg class="j-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
@@ -276,7 +283,7 @@
 
       <!-- Early career -->
       <div class="j-item">
-        <div class="j-year">2012</div>
+        <div class="j-year">2012 — 2015</div>
         <div class="j-dot-wrap"><div class="j-dot"></div></div>
         <div class="j-content">
           <div class="j-header">
@@ -297,23 +304,12 @@
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="section-alt" id="certifications">
-  <div class="container">
-    <div class="section-label" data-fr="Certifications" data-en="Certifications">Certifications</div>
-    <div class="certs-row">
-      <a href="https://academy.exoscale.com/certificates/8027af251b9549d5b2bd12e5c3ba693c" target="_blank" rel="noopener noreferrer" class="cert-item">
-        <div class="cert-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2 5l2-1l2 1l-2-5"/><circle cx="12" cy="9" r="6"/></svg>
-        </div>
-        <div>
-          <h3>Exoscale Certified Solution Architect</h3>
-          <p data-fr="Architecture cloud &amp; infrastructure &mdash; Février 2026" data-en="Cloud architecture &amp; infrastructure &mdash; February 2026">Architecture cloud &amp; infrastructure &mdash; Février 2026</p>
-        </div>
-        <svg class="cert-ext" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    <!-- Certification inline -->
+    <div class="cert-inline">
+      <a href="https://academy.exoscale.com/certificates/8027af251b9549d5b2bd12e5c3ba693c" target="_blank" rel="noopener noreferrer" class="cert-inline-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2 5l2-1l2 1l-2-5"/><circle cx="12" cy="9" r="6"/></svg>
+        <span>Exoscale Certified Solution Architect</span>
+        <span class="cert-inline-date">2026</span>
       </a>
     </div>
   </div>
@@ -361,6 +357,7 @@
         </div>
         <h3 data-fr="Votre infra vous freine" data-en="Your infra is slowing you down">Votre infra vous freine</h3>
         <p data-fr="Déploiements douloureux, incidents récurrents, coûts cloud qui explosent ? Je peux auditer, restructurer et automatiser." data-en="Painful deployments, recurring incidents, spiraling cloud costs? I can audit, restructure, and automate.">Déploiements douloureux, incidents récurrents, coûts cloud qui explosent ? Je peux auditer, restructurer et automatiser.</p>
+        <div class="collab-stat" data-fr="Optimisation AWS chez Pix4D sur 5 ans" data-en="AWS optimization at Pix4D over 5 years">Optimisation AWS chez Pix4D sur 5 ans</div>
       </div>
       <div class="collab-card">
         <div class="collab-icon">
@@ -368,6 +365,7 @@
         </div>
         <h3 data-fr="Vous lancez un produit" data-en="You're launching a product">Vous lancez un produit</h3>
         <p data-fr="De l'idée au MVP en production. Architecture, backend, déploiement, monitoring &mdash; je peux vous accompagner sur tout le cycle." data-en="From idea to MVP in production. Architecture, backend, deployment, monitoring &mdash; I can guide you through the full cycle.">De l'idée au MVP en production. Architecture, backend, déploiement, monitoring &mdash; je peux vous accompagner sur tout le cycle.</p>
+        <div class="collab-stat" data-fr="Wedding Valet : de l'idée au produit live" data-en="Wedding Valet: from idea to live product">Wedding Valet : de l'idée au produit live</div>
       </div>
       <div class="collab-card">
         <div class="collab-icon">
@@ -375,6 +373,7 @@
         </div>
         <h3 data-fr="Votre équipe a besoin d'un boost" data-en="Your team needs a boost">Votre équipe a besoin d'un boost</h3>
         <p data-fr="Mettre en place les bonnes pratiques DevOps, former sur l'IaC, renforcer la sécurité &mdash; je peux intégrer votre équipe sur une mission précise." data-en="Setting up DevOps best practices, training on IaC, strengthening security &mdash; I can join your team for a focused mission.">Mettre en place les bonnes pratiques DevOps, former sur l'IaC, renforcer la sécurité &mdash; je peux intégrer votre équipe sur une mission précise.</p>
+        <div class="collab-stat" data-fr="Mentorat junior &rarr; senior chez Pix4D" data-en="Junior &rarr; senior mentoring at Pix4D">Mentorat junior &rarr; senior chez Pix4D</div>
       </div>
     </div>
   </div>
@@ -387,7 +386,7 @@
       <div>
         <div class="section-label" data-fr="Discutons" data-en="Let's talk">Discutons</div>
         <h2 id="contact-title" class="section-title" data-fr="Un café, un appel, un message." data-en="A coffee, a call, a message.">Un café, un appel, un message.</h2>
-        <p class="section-desc" data-fr="Pas besoin d'un cahier des charges de 40 pages. Décrivez-moi votre problème et on voit ensemble si je peux aider." data-en="No need for a 40-page spec. Tell me about your problem and let's figure out together if I can help.">Pas besoin d'un cahier des charges de 40 pages. Décrivez-moi votre problème et on voit ensemble si je peux aider.</p>
+        <p class="section-desc" data-fr="Pas besoin d'un cahier des charges de 40 pages. Décrivez-moi votre problème et on voit ensemble si je peux aider. Basé à Lausanne, disponible pour un café ou un appel." data-en="No need for a 40-page spec. Tell me about your problem and let's figure out together if I can help. Based in Lausanne, available for a coffee or a call.">Pas besoin d'un cahier des charges de 40 pages. Décrivez-moi votre problème et on voit ensemble si je peux aider. Basé à Lausanne, disponible pour un café ou un appel.</p>
       </div>
       <div class="contact-channels">
         <div class="channel-row">
@@ -413,7 +412,7 @@
             </div>
             <div class="channel-name">WhatsApp</div>
             <div class="channel-detail" data-fr="Message direct" data-en="Direct message">Message direct</div>
-            <div class="channel-hint" data-fr="Pour un échange rapide" data-en="For a quick chat">Pour un échange rapide</div>
+            <div class="channel-hint" data-fr="Pour un échange informel" data-en="For an informal chat">Pour un échange informel</div>
           </a>
           <a href="https://t.me/TheOneAndUniqueTom" target="_blank" rel="noopener noreferrer" class="channel-card">
             <div class="channel-icon channel-icon-tg">
@@ -421,16 +420,8 @@
             </div>
             <div class="channel-name">Telegram</div>
             <div class="channel-detail">@TheOneAndUniqueTom</div>
-            <div class="channel-hint" data-fr="Pour un échange rapide" data-en="For a quick chat">Pour un échange rapide</div>
+            <div class="channel-hint" data-fr="Pour les discussions techniques" data-en="For technical discussions">Pour les discussions techniques</div>
           </a>
-          <div class="channel-card channel-card-irl">
-            <div class="channel-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="channel-name" data-fr="En personne" data-en="In person">En personne</div>
-            <div class="channel-detail">Lausanne</div>
-            <div class="channel-hint" data-fr="Autour d'un café" data-en="Over a coffee">Autour d'un café</div>
-          </div>
         </div>
         <div class="contact-sub">
           <a href="https://github.com/triat" target="_blank" rel="noopener noreferrer" class="contact-sub-link">
@@ -452,7 +443,26 @@
       <path d="M0,0 L0,20 L100,35 L200,15 L300,28 L400,8 L500,22 L600,5 L700,18 L800,30 L900,12 L1000,25 L1100,10 L1200,20 L1300,32 L1440,15 L1440,0 Z" fill="var(--section-bg)"/>
     </svg>
   </div>
-  <p>&copy; 2026 Tom Riat &mdash; Ingénieur Logiciel &mdash; Lausanne, Suisse</p>
+  <div class="footer-inner">
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about" data-fr="Approche" data-en="Approach">Approche</a>
+      <a href="#journey" data-fr="Parcours" data-en="Journey">Parcours</a>
+      <a href="#project" data-fr="Projet" data-en="Project">Projet</a>
+      <a href="#collaborate" data-fr="Collaborer" data-en="Collaborate">Collaborer</a>
+    </nav>
+    <div class="footer-social">
+      <a href="https://github.com/triat" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/tom-riat" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="https://t.me/TheOneAndUniqueTom" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 4.4L2.4 11.5c-.6.2-.6.8 0 1l4.8 1.5 1.8 5.8c.2.5.7.5 1 .2l2.6-2.2 4.9 3.6c.5.4 1.2.1 1.3-.5L21.9 5.4c.2-.7-.3-1.2-.7-1z"/><path d="M8.8 13.5l8.5-6.3"/></svg>
+      </a>
+    </div>
+    <p>&copy; 2026 Tom Riat &mdash; Lausanne, Suisse</p>
+  </div>
 </footer>
 
 <script src="main.js"></script>
